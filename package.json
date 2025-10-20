@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+ "scripts": {
+    "start": "node index.js -i house-price.json -h localhost -p 3000",
+    "dev": "nodemon -- main.js --input house-price.json --host localhost --port 3000"
   },
   "repository": {
     "type": "git",

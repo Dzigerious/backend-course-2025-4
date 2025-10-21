@@ -14,12 +14,6 @@ const options = program.opts();
 
 fs.access(options.input)
   .then(() => {
-    // Перевірка хоста
-    if (!options.host) {
-      console.error("Please, specify host");
-      process.exit(1);
-    }
-    
     const validHosts = ["localhost", "127.0.0.1", "::1"];
     const hostRegex =
       /^(?!-)[A-Za-z0-9-]{1,63}(?<!-)(\.[A-Za-z]{2,})+$|^localhost$|^(\d{1,3}\.){3}\d{1,3}$/;
